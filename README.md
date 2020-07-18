@@ -1,4 +1,4 @@
-# KaggleToGoogcleCloudStorage
+# KaggleToGoogleCloudStorage
 This script will help you to import any Kaggle dataset into Google Cloud Storage 
 
 ## How to use it ?
