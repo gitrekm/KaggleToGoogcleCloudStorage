@@ -4,7 +4,7 @@ This script will help you to import any Kaggle dataset into Google Cloud Storage
 ## How to use it ?
 
 ### Step1
-1- Import your Kaggle API Key to Cloud Shell
+1- Import your Kaggle API Key (kaggle.json file)to Cloud Shell
 
 ### Step2
 2- Get your GCP Project-ID and the dataset you want to downlaod 
