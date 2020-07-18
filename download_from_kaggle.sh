@@ -1,5 +1,6 @@
 !/bin/bash
-#usage .sh datasetname gcs_project
+#usage ./download_from_kaggle.sh .sh datasetname gcs_project_id
+
 # Installing python3 and pip and the dependencies
 sudo apt update
 sudo apt install -y python3 python3-dev python3-venv
@@ -31,12 +32,13 @@ do
 unzip "$file" -d ./
 done
 
-#Creating  bucket 
+#Creating  GCS bucket(with default setup) 
 echo "setting project and creating bucket on GCS..."
 bucket_name=$2"-dataset"
 gcloud config set project $2
 gsutil mb gs://$bucket_name/
 echo "bucket created..."
+
 #upload it to GCS
 echo "uploading to GCS..."
 gsutil cp *.csv gs://$bucket_name
